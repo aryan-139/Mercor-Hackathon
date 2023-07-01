@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TextField, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import prepProImage from './assets/PrepPro.png'; // Import the image
 
 const StyledForm = styled('form')({
   display: 'grid',
@@ -29,9 +30,11 @@ const StyledAppName = styled('h1')({
 });
 
 const StyledSlideshow = styled('div')({
-  flex: '1', // Occupy remaining space
+  flex: '0.98', // Occupy remaining space
   height: '100vh',
-  background: 'url(image1.jpg) center/cover', // Replace with the image source and customize as needed
+  background: `url(${prepProImage}) `, // Use the imported image as the background
+  backgroundPosition: 'top'
+
 });
 
 export const Login = (props) => {
